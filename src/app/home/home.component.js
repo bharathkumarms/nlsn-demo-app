@@ -11,20 +11,7 @@
   function HomeController($log, SAMPLE_CONSTANT) {
     var vm = this;
 
-    vm.greeting = '';
 
-    vm.showSampleConstant = showSampleConstant;
-
-    activate();
-
-    function activate() {
-      vm.greeting = 'Hello, world god!';
-      $log.debug('home activation');
-    }
-
-    function showSampleConstant() {
-      alert(SAMPLE_CONSTANT);
-    }
   }
 
 })();
