@@ -1,8 +1,6 @@
 {
   "name": "angular-gulp-boilerplate",
-  "authors": [
-    "Danila Loginov <loginovdanila@gmail.com> (https://loginov.rocks/)"
-  ],
+  "authors": [],
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^1.0.0",
@@ -11,5 +9,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/1oginov/Angular-Gulp-Boilerplate.git"
+  },
+  "devDependencies": {
+    "d3": "^4.9.1"
   }
 }
