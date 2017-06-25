@@ -205,7 +205,7 @@
         // Add a rect for each market.
         var markets = segments.selectAll(".market")
           .data(function (d) { return d.values; })
-          .enter().append("a")
+          .enter().append("a").attr("xlink:href", function(d){ return "http://en.wikipedia.org/wiki/"+d.market})
           .attr("class", "market")
           .attr("xlink:title", function (d) { return d.market + " " + d.parent.key + ": " + n(d.value); })
           .append("rect")
