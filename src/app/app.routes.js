@@ -9,8 +9,8 @@
       url: '/',
       component: 'home',
     });
-    $stateProvider.state('chart1',{
-      url: '/chart1',
+    $stateProvider.state('marimekko',{
+      url: '/marimekko',
       component: 'nlsnMarimekkoChart',
     });
 
