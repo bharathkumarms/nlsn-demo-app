@@ -17,6 +17,10 @@
       url: '/boxplot',
       component: 'nlsnBoxplotChart'
     });
+    $stateProvider.state('pie',{
+      url: '/pie/:param',
+      component: 'nlsnPieChart'
+    });
 
     $urlRouterProvider.otherwise('/');
   }
