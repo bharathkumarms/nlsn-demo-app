@@ -11,7 +11,11 @@
     });
     $stateProvider.state('marimekko',{
       url: '/marimekko',
-      component: 'nlsnMarimekkoChart',
+      component: 'nlsnMarimekkoChart'
+    });
+    $stateProvider.state('boxplot',{
+      url: '/boxplot',
+      component: 'nlsnBoxplotChart'
     });
 
     $urlRouterProvider.otherwise('/');
