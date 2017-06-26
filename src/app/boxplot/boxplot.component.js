@@ -468,13 +468,23 @@
             .scale(y)
             .orient("left");
 
+          var barData = [60, 50, 30, 20];
+          var heightData = [50, 60, 80, 90];
           // draw the boxplots	
           svg.selectAll(".box")
             .data(data)
             .enter().append("g")
             .attr("transform", function (d) { return "translate(" + x(d[0]) + "," + margin.top + ")"; })
-            .call(chart.width(x.rangeBand()));
-
+            .call(chart.width(x.rangeBand()))
+            .append("rect")
+            .style("fill", "red")
+            .data(heightData)
+            .attr("transform", function (d) { return "translate(" + 0 + "," + d + ")"; })
+            .attr("x", function (d) { return 0; })
+            .attr("width", x.rangeBand())
+            .attr("y", function (d) { return 200; })
+            .data(barData)
+            .attr("height", function (d) { return d; });
 
           // add a title
           svg.append("text")
@@ -490,6 +500,7 @@
             .attr("class", "y axis")
             .call(yAxis)
             .append("text") // and text1
+            .append("rect")
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
             .attr("dy", ".71em")
@@ -503,6 +514,7 @@
             .attr("transform", "translate(0," + (height + margin.top + 10) + ")")
             .call(xAxis)
             .append("text")             // text label for the x axis
+            .append("rect")
             .attr("x", (width / 2))
             .attr("y", 10)
             .attr("dy", ".71em")
